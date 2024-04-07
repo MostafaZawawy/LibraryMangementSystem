@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="maids.library.demo.LibraryControllerTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2024-04-07T20:23:26" hostname="MOSTAFA" time="0.762">
+  <properties/>
+  <testcase name="givenNonExistingPatronId_whenGetPatronById_thenReturnNotFound()" classname="maids.library.demo.LibraryControllerTest" time="0.23"/>
+  <testcase name="givenNewBook_whenAddBook_thenStatusCreated()" classname="maids.library.demo.LibraryControllerTest" time="0.217"/>
+  <testcase name="givenNonExistingPatronId_whenDeletePatron_thenReturnNotFound()" classname="maids.library.demo.LibraryControllerTest" time="0.008"/>
+  <testcase name="givenExistingPatronId_whenUpdatePatron_thenReturnUpdatedPatron()" classname="maids.library.demo.LibraryControllerTest" time="0.128"/>
+  <testcase name="givenPatronId_whenGetPatronById_thenReturnPatronObject()" classname="maids.library.demo.LibraryControllerTest" time="0.006"/>
+  <testcase name="givenValidBookIdAndPatronId_whenBorrowBook_thenStatusCreated()" classname="maids.library.demo.LibraryControllerTest" time="0.004"/>
+  <testcase name="givenInvalidPatron_whenAddPatron_thenReturnBadRequest()" classname="maids.library.demo.LibraryControllerTest" time="0.032"/>
+  <testcase name="givenExistingPatronId_whenDeletePatron_thenReturnNoContent()" classname="maids.library.demo.LibraryControllerTest" time="0.005"/>
+  <testcase name="givenNoPatrons_whenGetAllPatrons_thenReturnNotFound()" classname="maids.library.demo.LibraryControllerTest" time="0.007"/>
+  <testcase name="givenNonExistingPatronId_whenUpdatePatron_thenReturnNotFound()" classname="maids.library.demo.LibraryControllerTest" time="0.007"/>
+  <testcase name="givenBookId_whenDeleteBook_thenStatusNoContent()" classname="maids.library.demo.LibraryControllerTest" time="0.006"/>
+  <testcase name="givenValidBookId_whenGetBookById_thenRetrieveBookDetails()" classname="maids.library.demo.LibraryControllerTest" time="0.014"/>
+  <testcase name="givenNoBooks_whenGetAllBooks_thenReturnNotFound()" classname="maids.library.demo.LibraryControllerTest" time="0.005"/>
+  <testcase name="givenExistingBooks_whenGetAllBooks_thenReturnBookList()" classname="maids.library.demo.LibraryControllerTest" time="0.009"/>
+  <testcase name="givenExistingBook_whenUpdateBook_thenStatusOk()" classname="maids.library.demo.LibraryControllerTest" time="0.011"/>
+  <testcase name="givenInvalidPatronId_whenBorrowBook_thenStatusNotFound()" classname="maids.library.demo.LibraryControllerTest" time="0.005"/>
+  <testcase name="givenNonExistingBookId_whenGetBookById_thenReturnNotFound()" classname="maids.library.demo.LibraryControllerTest" time="0.007"/>
+  <testcase name="givenInvalidBookId_whenBorrowBook_thenStatusNotFound()" classname="maids.library.demo.LibraryControllerTest" time="0.005"/>
+  <testcase name="givenPatrons_whenGetAllPatrons_thenReturnList()" classname="maids.library.demo.LibraryControllerTest" time="0.015"/>
+  <testcase name="givenValidPatron_whenAddPatron_thenReturnCreatedStatus()" classname="maids.library.demo.LibraryControllerTest" time="0.006"/>
+  <system-out><![CDATA[22:23:22.615 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [maids.library.demo.LibraryControllerTest]: LibraryControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:23:22.796 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration maids.library.demo.LibraryManagementSystemApplication for test class maids.library.demo.LibraryControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+2024-04-07T22:23:23.325+02:00  INFO 28368 --- [Library Management System] [    Test worker] m.library.demo.LibraryControllerTest     : Starting LibraryControllerTest using Java 17.0.7 with PID 28368 (started by Mostafa El-Zawawy in C:\work4\Library)
+2024-04-07T22:23:23.327+02:00  INFO 28368 --- [Library Management System] [    Test worker] m.library.demo.LibraryControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2024-04-07T22:23:26.199+02:00  INFO 28368 --- [Library Management System] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-07T22:23:26.200+02:00  INFO 28368 --- [Library Management System] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-07T22:23:26.204+02:00  INFO 28368 --- [Library Management System] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-04-07T22:23:26.263+02:00  INFO 28368 --- [Library Management System] [    Test worker] m.library.demo.LibraryControllerTest     : Started LibraryControllerTest in 3.346 seconds (process running for 4.859)
+2024-04-07T22:23:26.921+02:00  WARN 28368 --- [Library Management System] [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<maids.library.demo.model.entity.Patron> maids.library.demo.controller.LibraryController.addPatron(maids.library.demo.model.entity.Patron) with 2 errors: [Field error in object 'patron' on field 'name': rejected value [null]; codes [NotBlank.patron.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patron.name,name]; arguments []; default message [name]]; default message [Name is required]] [Field error in object 'patron' on field 'contactInformation': rejected value [null]; codes [NotBlank.patron.contactInformation,NotBlank.contactInformation,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patron.contactInformation,contactInformation]; arguments []; default message [contactInformation]]; default message [Name is required]] ]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
